@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configs>
     <global>
-        <spark_master>spark://A23084021:7077</spark_master>
+        <spark_master>spark://192.168.0.1:7077</spark_master>
         <executor_memory>1g</executor_memory>
         <executor_cores>10</executor_cores>
     </global>
 
     <dimendata>
         <areainfo>
-            <inpath>hdfs:///user/mr/bigdata/test.log</inpath>
+            <inpath>hdfs:///user/gorlyJin/bigdata/test.log</inpath>
             <infile_splitby>|#</infile_splitby>
             <key pos="1" method="pipe"/>
             <value pos="3" method="pipe"/>
@@ -29,7 +29,7 @@
                     <!-- hdfs/file,代表上传到hdfs和本地文件系统-->
                     <storetype>hdfs</storetype>
                     <outfile_separator>|</outfile_separator>
-                    <outpath>/home/mr/zycdnupload/zy_sort_log/cdn</outpath>
+                    <outpath>/home/gorlyJin/zycdnupload/zy_sort_log/cdn</outpath>
                     <hdfs_outpath>/</hdfs_outpath>
                     <!-- 输出方式，合并到一个文件：merge；一个文件对应一个文件: individual-->
                     <exporttype>individual</exporttype>
@@ -42,7 +42,7 @@
             </zystandard>
             <common>
                 <infile_splitby>|</infile_splitby>
-                <inpath>/home/mr/zycdnupload/logserver/cdn/big</inpath>
+                <inpath>/home/gorlyJin/zycdnupload/logserver/cdn/big</inpath>
                 <infile_suffix>.txt</infile_suffix>
                 <dealflag>.O</dealflag>
             </common>

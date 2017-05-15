@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <!-- 集群模式下：hdfs://haCluster/ ; 非集群模式下：hdfs://A23084021:9000/ -->
+    <!-- 集群模式下：hdfs://haCluster/ ; 非集群模式下：hdfs://主机名:9000/ -->
 	<property>
 		<name>fs.defaultFS</name>
 		<value>hdfs://haCluster/</value>
