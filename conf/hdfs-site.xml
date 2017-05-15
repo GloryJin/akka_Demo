@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 集群模式下：hdfs://haCluster/ ; 非集群模式下：hdfs://A23084021:9000/ -->
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://haCluster/</value>
+	</property>
+	<!-- 非集群模式下以下属性全注释掉 -->
+	<property>
+		<name>dfs.nameservices</name>
+		<value>haCluster</value>
+	</property>
+	<!-- 自动Failover的实现策略 -->
+	<property>
+		<name>dfs.client.failover.proxy.provider.haCluster</name>
+		<value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+	</property>
+	<!-- 在命名空间下指定NameNode逻辑名；与nameservice类似，该项使用约定值"nn1,nn2" -->
+	<property>
+		<name>dfs.ha.namenodes.haCluster</name>
+		<value>nn1,nn2</value>
+	</property>
+	<!-- NameNode 1的RPC服务地址 例：machine1.zte.com:9000 -->
+	<property>
+		<name>dfs.namenode.rpc-address.haCluster.nn1</name>
+		<value>$nameNodeHostName:9000</value>
+	</property>
+	<!-- NameNode 2的RPC服务地址 例：machine2.zte.com:9000 -->
+	<property>
+		<name>dfs.namenode.rpc-address.haCluster.nn2</name>
+		<value>$standbyNameNodeHostName:9000</value>
+	</property>
+</configuration>

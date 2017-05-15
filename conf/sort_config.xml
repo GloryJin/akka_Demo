@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configs>
+    <global>
+        <spark_master>spark://A23084021:7077</spark_master>
+        <executor_memory>1g</executor_memory>
+        <executor_cores>10</executor_cores>
+    </global>
+
+    <dimendata>
+        <areainfo>
+            <inpath>hdfs:///user/mr/bigdata/test.log</inpath>
+            <infile_splitby>|#</infile_splitby>
+            <key pos="1" method="pipe"/>
+            <value pos="3" method="pipe"/>
+        </areainfo>
+    </dimendata>
+
+    <srcdatas>
+        <access>
+            <zystandard>
+                <fields>
+                    <field srcpos="1" dstpos="1" method="pipe"/>
+                    <field srcpos="2" dstpos="2" />
+                    <field srcpos="3" dstpos="3" />
+
+
+                </fields>
+                <common>
+                    <!-- hdfs/file,代表上传到hdfs和本地文件系统-->
+                    <storetype>hdfs</storetype>
+                    <outfile_separator>|</outfile_separator>
+                    <outpath>/home/mr/zycdnupload/zy_sort_log/cdn</outpath>
+                    <hdfs_outpath>/</hdfs_outpath>
+                    <!-- 输出方式，合并到一个文件：merge；一个文件对应一个文件: individual-->
+                    <exporttype>individual</exporttype>
+                    <!-- outfilename在exporttype为merge时，为文件名前缀。exporttype为individual时，采用method方法来得到文件名前缀-->
+                    <outfilename method=""></outfilename>
+                    <outfile_suffix>.log</outfile_suffix>
+                    <!-- 在exporttype为merge时,为避免产生的文件过大，对文件进行切割的行数-->
+                    <outsplitnum>200000</outsplitnum>
+                </common>
+            </zystandard>
+            <common>
+                <infile_splitby>|</infile_splitby>
+                <inpath>/home/mr/zycdnupload/logserver/cdn/big</inpath>
+                <infile_suffix>.txt</infile_suffix>
+                <dealflag>.O</dealflag>
+            </common>
+        </access>
+
+    </srcdatas>
+
+</configs>
