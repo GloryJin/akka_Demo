@@ -1,6 +1,4 @@
-/**
- * Created by 10190203 on 2017/5/8.
- */
+
 public class ToolTest {
 
     public String getT_name() {

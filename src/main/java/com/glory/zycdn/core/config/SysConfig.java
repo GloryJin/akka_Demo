@@ -1,10 +1,10 @@
-package com.zte.zycdn.core.config;
+package com.glory.zycdn.core.config;
 
-import com.zte.zycdn.core.util.HDFSUtil;
-import com.zte.zycdn.core.util.ToolUtil;
-import com.zte.zycdn.etl.metadata.ETLTaskMetaData;
-import com.zte.zycdn.etl.metadata.SrcDataMetaData;
-import com.zte.zycdn.etl.metadata.TransMetaData;
+import com.glory.zycdn.core.util.HDFSUtil;
+import com.glory.zycdn.core.util.ToolUtil;
+import com.glory.zycdn.etl.metadata.ETLTaskMetaData;
+import com.glory.zycdn.etl.metadata.SrcDataMetaData;
+import com.glory.zycdn.etl.metadata.TransMetaData;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.hadoop.conf.Configuration;
@@ -24,9 +24,7 @@ import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 import org.dom4j.DocumentException;
 
-/**
- * Created by 10190203 on 2017/5/8.
- */
+
 public class SysConfig{
     private static final Logger log = Logger.getLogger(SysConfig.class);
     private static final String workdir = "/home/mr/zycdnetl";

@@ -1,14 +1,12 @@
-package com.zte.zycdn.etl.actor
+package com.glory.zycdn.etl.actor
 
 import java.io.File
 
 import akka.actor.Actor
-import com.zte.zycdn.etl.metadata.{ETLTaskMetaData, FileMsg, FinshMsg, SrcDataMetaData}
+import com.glory.zycdn.etl.metadata.{ETLTaskMetaData, FileMsg, FinshMsg, SrcDataMetaData}
 import org.apache.log4j.Logger
 
-/**
-  * Created by 10190203 on 2017/5/14.
-  */
+
 class MergeETLHandleActor extends Actor{
   val logger = Logger.getLogger(classOf[MergeETLHandleActor])
   var srcCommon:SrcDataMetaData#SrcCommon = null

@@ -1,9 +1,9 @@
-package com.zte.zycdn.etl.actor
+package com.glory.zycdn.etl.actor
 
 import java.io.File
 
 import akka.actor.{Actor, ActorRef, Props}
-import com.zte.zycdn.etl.metadata._
+import com.glory.zycdn.etl.metadata._
 import java.nio.file.StandardWatchEventKinds.ENTRY_CREATE
 import java.nio.file.{FileSystems, Paths,  WatchKey}
 import java.util
@@ -13,9 +13,7 @@ import org.apache.log4j.Logger
 
 import scala.collection.JavaConverters._
 
-/**
-  * Created by 10190203 on 2017/5/10.
-  */
+
 class SrcHandleActor extends Actor{
   val logger = Logger.getLogger(classOf[SrcHandleActor])
   val etlTaskHandleActorRefMap = new HashMap[String,ActorRef]()

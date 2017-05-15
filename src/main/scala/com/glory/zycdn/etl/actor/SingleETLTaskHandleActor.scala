@@ -1,15 +1,13 @@
-package com.zte.zycdn.etl.actor
+package com.glory.zycdn.etl.actor
 
 import java.io.File
 
 import akka.actor.{Actor, ActorRef, Props}
-import com.zte.zycdn.etl.metadata._
+import com.glory.zycdn.etl.metadata._
 import org.apache.log4j.Logger
-import com.zte.zycdn.core.util.ToolUtil
+import com.glory.zycdn.core.util.ToolUtil
 
-/**
-  * Created by 10190203 on 2017/5/11.
-  */
+
 class SingleETLTaskHandleActor extends Actor{
   val logger = Logger.getLogger(classOf[SingleETLTaskHandleActor])
   var srcCommon:SrcDataMetaData#SrcCommon = null

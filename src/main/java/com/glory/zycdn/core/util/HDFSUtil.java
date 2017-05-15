@@ -1,11 +1,11 @@
-package com.zte.zycdn.core.util;
+package com.glory.zycdn.core.util;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 
-import com.zte.zycdn.core.config.SysConfig;
+import com.glory.zycdn.core.config.SysConfig;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.log4j.Logger;
 
@@ -13,9 +13,7 @@ import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 
-/**
- * Created by 10190203 on 2017/5/8.
- */
+
 public class HDFSUtil {
     private static final Logger log = Logger.getLogger(HDFSUtil.class);
 

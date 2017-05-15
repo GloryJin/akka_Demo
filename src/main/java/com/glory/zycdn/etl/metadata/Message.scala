@@ -1,13 +1,11 @@
-package com.zte.zycdn.etl.metadata
+package com.glory.zycdn.etl.metadata
 
 import java.io.File
 import java.util.HashMap
 
 import akka.actor.ActorRef
 
-/**
-  * Created by 10190203 on 2017/5/14.
-  */
+
 trait Message {
 
 }

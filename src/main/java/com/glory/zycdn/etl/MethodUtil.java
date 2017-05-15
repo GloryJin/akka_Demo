@@ -1,12 +1,10 @@
-package com.zte.zycdn.etl;
+package com.glory.zycdn.etl;
 
-import com.zte.zycdn.core.config.SysConfig;
+import com.glory.zycdn.core.config.SysConfig;
 
 import java.util.Map;
 
-/**
- * Created by 10190203 on 2017/5/8.
- */
+
 public class MethodUtil {
     public String pipe(String[] args){
         return args[0] + ":hello";

@@ -3,9 +3,7 @@ import org.apache.commons.logging.LogFactory;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Field;
-/**
- * Created by 10190203 on 2017/5/8.
- */
+
 public class ReflectTest {
     private static final Log logger  = LogFactory.getLog(ReflectTest.class);
 

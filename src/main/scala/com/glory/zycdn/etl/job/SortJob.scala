@@ -1,16 +1,14 @@
-package com.zte.zycdn.etl.job
+package com.glory.zycdn.etl.job
 
-import com.zte.zycdn.core.framework.JobBase
-import com.zte.zycdn.etl.actor.{SrcDispatchActor, SrcHandleActor}
-import com.zte.zycdn.core.config.SysConfig
+import com.glory.zycdn.core.framework.JobBase
+import com.glory.zycdn.etl.actor.{SrcDispatchActor, SrcHandleActor}
+import com.glory.zycdn.core.config.SysConfig
 import akka.actor.ActorSystem
 import akka.actor.Props
-import com.zte.zycdn.etl.metadata.SrcsMsg
+import com.glory.zycdn.etl.metadata.SrcsMsg
 import org.apache.log4j.{Logger, PropertyConfigurator}
 import scala.collection.JavaConverters._
-/**
-  * Created by 10190203 on 2017/5/10.
-  */
+
 class SortJob{
 
 }

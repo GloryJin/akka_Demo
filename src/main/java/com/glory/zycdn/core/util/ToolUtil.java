@@ -1,20 +1,17 @@
-package com.zte.zycdn.core.util;
+package com.glory.zycdn.core.util;
 
-import com.zte.zycdn.etl.MethodUtil;
+import com.glory.zycdn.etl.MethodUtil;
 
 import java.lang.reflect.Method;
 
 import org.apache.log4j.Logger;
 
-/**
- * Created by 10190203 on 2017/5/8.
- */
 public class ToolUtil {
     private Logger log = Logger.getLogger(ToolUtil.class);
 
     public static String callMethod(String methodname){
         try{
-            Class jobclass = Class.forName("com.zte.zycdn.etl.MethodUtil");
+            Class jobclass = Class.forName("com.glory.zycdn.etl.MethodUtil");
             @SuppressWarnings("uncheck")
             Method method = jobclass.getMethod(methodname);
             return method.invoke(jobclass.newInstance()).toString();
@@ -26,7 +23,7 @@ public class ToolUtil {
 
     public static String callMethod(String methodname,String[] args){
         try{
-            Class jobclass = Class.forName("com.zte.zycdn.etl.MethodUtil");
+            Class jobclass = Class.forName("com.glory.zycdn.etl.MethodUtil");
             Class argsClass = args.getClass();
             @SuppressWarnings("uncheck")
             Method method = jobclass.getMethod(methodname,argsClass);

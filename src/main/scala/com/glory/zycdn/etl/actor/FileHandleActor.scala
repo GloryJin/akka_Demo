@@ -1,15 +1,13 @@
-package com.zte.zycdn.etl.actor
+package com.glory.zycdn.etl.actor
 
 import java.io._
 
 import scala.io.Source
 import akka.actor.Actor
-import com.zte.zycdn.core.util.ToolUtil
-import com.zte.zycdn.etl.metadata.{ETLTaskMetaData, FinshMsg, SortFileMsg, SrcDataMetaData}
+import com.glory.zycdn.core.util.ToolUtil
+import com.glory.zycdn.etl.metadata.{ETLTaskMetaData, FinshMsg, SortFileMsg, SrcDataMetaData}
 import org.apache.log4j.Logger
-/**
-  * Created by 10190203 on 2017/5/11.
-  */
+
 class FileHandleActor extends Actor{
   val logger = Logger.getLogger(classOf[FileHandleActor])
   override def receive: Receive = {

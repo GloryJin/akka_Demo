@@ -1,10 +1,8 @@
-package com.zte.zycdn.etl.metadata;
+package com.glory.zycdn.etl.metadata;
 
 import java.util.List;
 
-/**
- * Created by 10190203 on 2017/5/9.
- */
+
 public class SrcDataMetaData {
 
     private List<ETLTaskMetaData> etlTasks;

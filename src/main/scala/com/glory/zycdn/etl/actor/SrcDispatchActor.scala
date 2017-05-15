@@ -1,4 +1,4 @@
-package com.zte.zycdn.etl.actor
+package com.glory.zycdn.etl.actor
 
 import java.io.File
 import java.util
@@ -6,13 +6,10 @@ import java.util.HashMap
 
 import scala.collection.JavaConverters._
 import akka.actor.{Actor, Props}
-import com.zte.zycdn.etl.metadata.{FinshMsg, FinshSrcMsg, SrcDataMetaData, SrcsMsg}
+import com.glory.zycdn.etl.metadata.{FinshMsg, FinshSrcMsg, SrcDataMetaData, SrcsMsg}
 import org.apache.log4j.Logger
 
 
-/**
-  * Created by 10190203 on 2017/5/14.
-  */
 class SrcDispatchActor extends Actor{
   val logger = Logger.getLogger(classOf[SrcDispatchActor])
   //这里存etl任务的完成信息[srcname,[filename,[taskname,0]]]
